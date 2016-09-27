@@ -16,7 +16,7 @@ def save_or_print_json(json_str, outdir, json_name):
 def create_json(bigwigs_list=None, args=None):
     ret = {
         'nthreads': args.nthreads,
-        'nextend_bins_tuple': args.nextend_bins_tuple,
+        'nextend_bins_tuples': args.nextend_bins_tuples,
         'regions_bedfile': os.path.abspath(args.regions_bedfile.name),
         'bigwigs': [[{'class': 'File', 'path': p} for p in bw] for bw in
                     bigwigs_list]
@@ -37,9 +37,9 @@ def main():
                         help='Bedfile with the regions used as anchor points.')
     parser.add_argument('--nthreads', type=int, dest='nthreads', default=1,
                         help='Number of threads.')
-    parser.add_argument('--nextend-bins-tuple', type=int,
+    parser.add_argument('--nextend-bins-tuples', type=int,
                         default=[[5000, 5], [10000, 10]],
-                        help='Tuple with 1. Number of bases to extend to '
+                        help='tuples with 1. Number of bases to extend to '
                              'each side of the anchor point, and 2. number of '
                              'bins.')
 
