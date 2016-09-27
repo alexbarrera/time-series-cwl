@@ -1,0 +1,11 @@
+{
+  "nthreads": 1,
+  "nextend_bins_tuples": [10, 5],
+  "regions_bedfile": {"class": "File", "path": "/Users/abarrera/data/gencode.v22.annotation.TSS.bed" },
+  "bigwigs":
+    {
+      "class": "File",
+      "path": "/Users/abarrera/data/compute_matrix/BCL3.t00_rep1.fragment_extended_norm.chr21.bw"
+    }
+
+}

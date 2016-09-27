@@ -1,0 +1,20 @@
+{
+  "arrays": [
+    {
+      "class": "File",
+      "path": "/Users/abarrera/data/compute_matrix/BCL3.t00_rep1.fragment_extended_norm.chr21.20_10.txt"
+    },
+    {
+      "class": "File",
+      "path": "/Users/abarrera/data/compute_matrix/BCL3.t00_rep2.fragment_extended_norm.chr21.20_10.txt"
+    },
+    {
+      "class": "File",
+      "path": "/Users/abarrera/data/compute_matrix/BCL3.t5_rep1.fragment_extended_norm.chr21.20_10.txt"
+    },
+    {
+      "class": "File",
+      "path": "/Users/abarrera/data/compute_matrix/BCL3.t5_rep2.fragment_extended_norm.chr21.20_10.txt"
+    }
+  ]
+}
