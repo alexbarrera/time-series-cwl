@@ -17,7 +17,7 @@ def create_json(bigwigs_list=None, args=None):
     ret = {
         'nthreads': args.nthreads,
         'nextend_bins_tuples': args.nextend_bins_tuples,
-        'regions_bedfile': os.path.abspath(args.regions_bedfile.name),
+        'regions_bedfile': {'class': 'File', 'path': os.path.abspath(args.regions_bedfile.name)},
         'bigwigs': [[{'class': 'File', 'path': p} for p in bw] for bw in
                     bigwigs_list]
     }
