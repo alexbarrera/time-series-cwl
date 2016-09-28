@@ -33,11 +33,17 @@ inputs:
       Bedfile of the regions (e.g. TSSs) used as reference points to extend
       the region read counts.
     type: File
+  - id: "#gtf"
+    description: |
+      Genome annotation file in GTF format. Used to generate a exons per
+      gene file.
+    type: File
   - id: "#nthreads"
     description: Number of threads.
     type: int
 
 steps:
+
   - id: "#process-sample"
     run: "pipeline-one-factor.cwl"
     scatter: "#process-sample.bigwigs"
@@ -75,6 +81,22 @@ steps:
         source: "#regions_bedfile"
     outputs:
       - id: "#add-gene-name.out"
+
+  - id: "#gtf-to-exons"
+    run: "gtf-to-exons-per-gene-array.cwl"
+    inputs:
+      - id: "#gtf-to-exons.gtf"
+        source: "#gtf"
+      - id: "#gtf-to-exons.out_file_name"
+        source: "#gtf"
+        valueFrom: |
+          ${
+            return self.path.replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '.exons.tsv');
+          }
+      - id: "#gtf-to-exons.nthreads"
+        source: "#nthreads"
+    outputs:
+      - id: "#gtf-to-exons.out"
 
 outputs:
   - id: "#output_matrices"
@@ -118,3 +140,6 @@ outputs:
     type:
       type: array
       items: File
+  - id: "#exons_tsv"
+    source: "#gtf-to-exons.out"
+    type: File

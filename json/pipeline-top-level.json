@@ -6,6 +6,11 @@
       "class": "File",
       "path": "/Users/abarrera/data/gencode.v22.annotation.TSS.chr21.sample.bed"
     },
+  "gtf":
+    {
+      "class": "File",
+      "path": "/Users/abarrera/data/gencode.v22.annotation.TEST.gtf"
+    },
   "bigwigs": [
     [
       {
