@@ -33,6 +33,8 @@ steps:
   merge-resolutions:
     in:
       files: process-each-resolution/flattened_array
+      stackaxis:
+        valueFrom: $(2)
       out_file_name:
         source: process-each-resolution/flattened_array
         valueFrom: "${\n  return self[0].path.replace(/^.*[\\\\\\/]/, '').replace(/\\\
