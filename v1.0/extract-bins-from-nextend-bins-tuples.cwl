@@ -6,11 +6,7 @@ requirements:
   InlineJavascriptRequirement: {}
 inputs:
   arrays:
-    type:
-      type: array
-      items:
-        type: array
-        items: int
+    type: int[][]
 expression: |
   ${
     var out = [];
@@ -21,6 +17,4 @@ expression: |
   }
 outputs:
   flattened_array:
-    type:
-      type: array
-      items: int
+    type: int[]

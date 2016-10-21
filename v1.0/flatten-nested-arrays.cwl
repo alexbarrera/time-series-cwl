@@ -6,11 +6,7 @@ requirements:
   InlineJavascriptRequirement: {}
 inputs:
   arrays:
-    type:
-      type: array
-      items:
-        type: array
-        items: File
+    type: File[][]
 expression: |
   ${
     var out = [];
@@ -23,6 +19,4 @@ expression: |
   }
 outputs:
   flattened_array:
-    type:
-      type: array
-      items: File
+    type: File[]

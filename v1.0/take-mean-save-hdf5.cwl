@@ -9,9 +9,7 @@ hints:
     dockerImageId: dukegcb/python-array-utils
 inputs:
   arrays:
-    type:
-      type: array
-      items: File
+    type: File[]
     inputBinding:
       position: 1
       prefix: -arrays

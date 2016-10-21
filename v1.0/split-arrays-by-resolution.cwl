@@ -6,9 +6,7 @@ requirements:
   InlineJavascriptRequirement: {}
 inputs:
   arrays:
-    type:
-      type: array
-      items: File
+    type: File[]
 expression: |
   ${
     var out = {};
@@ -30,8 +28,4 @@ expression: |
   }
 outputs:
   array_by_res:
-    type:
-      type: array
-      items:
-        type: array
-        items: File
+    type: File[][]

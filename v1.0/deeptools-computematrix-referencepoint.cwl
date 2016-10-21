@@ -303,9 +303,7 @@ inputs:
       averaging the score over the regions length. (default:
       10)
   regionsFiles:
-    type:
-      type: array
-      items: File
+    type: File[]
     inputBinding:
       position: 1
       prefix: --regionsFileName
@@ -318,9 +316,7 @@ inputs:
       the regions until the previous "#" to be considered
       one group. (default: None)
   scoreFiles:
-    type:
-      type: array
-      items: File
+    type: File[]
     inputBinding:
       position: 1
       prefix: --scoreFileName

@@ -20,9 +20,7 @@ inputs:
       prefix: --gene-names
     doc: File with gene names (one per line)
   resloutions:
-    type:
-      type: array
-      items: int
+    type: int[]
     inputBinding:
       position: 3
       prefix: --resolutions
