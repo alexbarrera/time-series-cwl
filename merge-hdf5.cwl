@@ -23,6 +23,14 @@ inputs:
     inputBinding:
       position: 1
       prefix: '-out'
+  - id: stackaxis
+    type:
+      - 'null'
+      - int
+    description: "Axis used to stack the reads"
+    inputBinding:
+      position: 2
+      prefix: '--stackaxis'
 
 outputs:
   - id: '#out'

@@ -11,19 +11,27 @@ inputs:
     type: File
     description: HDF5 file containing a reads dataset
     inputBinding:
-      position: 2
+      position: 1
   - id: outFileName
     type: string
     description: Output filename
     inputBinding:
+      position: 2
+  - id: resloutions
+    type:
+      type: array
+      items: int
+    description: Resolution of the matrices (num. of bases per bin)
+    inputBinding:
       position: 3
+      prefix: '--resolutions'
   - id: genes_bedfile
     type:
       - 'null'
       - File
     description: "BED file used to extract the gene names (column 4)"
     inputBinding:
-      position: 1
+      position: 3
       prefix: '--genes-bedfile'
   - id: gene_names
     type:
@@ -31,7 +39,7 @@ inputs:
       - File
     description: "File with gene names (one per line)"
     inputBinding:
-      position: 1
+      position: 3
       prefix: '--gene-names'
 
 outputs:

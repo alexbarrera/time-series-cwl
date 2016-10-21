@@ -93,6 +93,8 @@ steps:
           ${
             return self[0].path.replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '').replace(/\.\d+\_\d+\.merged$/,'') + '.h5';
           }
+      - id: "#merge-resolutions.stackaxis"
+        valueFrom: $(2)
     outputs:
       - id: "#merge-resolutions.out"
 

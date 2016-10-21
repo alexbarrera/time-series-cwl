@@ -1,6 +1,6 @@
 {
   "nthreads": 1,
-  "nextend_bins_tuples": [[10, 5], [20, 10]],
+  "nextend_bins_tuples": [[50, 25], [100, 50]],
   "regions_bedfile":
     {
       "class": "File",
@@ -15,38 +15,54 @@
     [
       {
         "class": "File",
-        "path": "/Users/abarrera/data/compute_matrix/BCL3.t00_rep1.fragment_extended_norm.chr21.bw"
+        "path": "/Users/abarrera/data/ts-views/BCL3.t00_rep1.fragment_extended_norm.chr21.bw"
       },
       {
         "class": "File",
-        "path": "/Users/abarrera/data/compute_matrix/BCL3.t00_rep2.fragment_extended_norm.chr21.bw"
+        "path": "/Users/abarrera/data/ts-views/BCL3.t00_rep2.fragment_extended_norm.chr21.bw"
       },
       {
         "class": "File",
-        "path": "/Users/abarrera/data/compute_matrix/BCL3.t5_rep1.fragment_extended_norm.chr21.bw"
+        "path": "/Users/abarrera/data/ts-views/BCL3.t1_rep1.fragment_extended_norm.chr21.bw"
       },
       {
         "class": "File",
-        "path": "/Users/abarrera/data/compute_matrix/BCL3.t5_rep2.fragment_extended_norm.chr21.bw"
+        "path": "/Users/abarrera/data/ts-views/BCL3.t1_rep2.fragment_extended_norm.chr21.bw"
+      },
+      {
+        "class": "File",
+        "path": "/Users/abarrera/data/ts-views/BCL3.t5_rep1.fragment_extended_norm.chr21.bw"
+      },
+      {
+        "class": "File",
+        "path": "/Users/abarrera/data/ts-views/BCL3.t5_rep2.fragment_extended_norm.chr21.bw"
       }
     ]
   ,
     [
       {
         "class": "File",
-        "path": "/Users/abarrera/data/compute_matrix/GR.t00_rep1.fragment_extended_norm.chr21.bw"
+        "path": "/Users/abarrera/data/ts-views/GR.t00_rep1.fragment_extended_norm.chr21.bw"
       },
       {
         "class": "File",
-        "path": "/Users/abarrera/data/compute_matrix/GR.t00_rep2.fragment_extended_norm.chr21.bw"
+        "path": "/Users/abarrera/data/ts-views/GR.t00_rep2.fragment_extended_norm.chr21.bw"
       },
       {
         "class": "File",
-        "path": "/Users/abarrera/data/compute_matrix/GR.t5_rep1.fragment_extended_norm.chr21.bw"
+        "path": "/Users/abarrera/data/ts-views/GR.t1_rep1.fragment_extended_norm.chr21.bw"
       },
       {
         "class": "File",
-        "path": "/Users/abarrera/data/compute_matrix/GR.t5_rep2.fragment_extended_norm.chr21.bw"
+        "path": "/Users/abarrera/data/ts-views/GR.t1_rep2.fragment_extended_norm.chr21.bw"
+      },
+      {
+        "class": "File",
+        "path": "/Users/abarrera/data/ts-views/GR.t5_rep1.fragment_extended_norm.chr21.bw"
+      },
+      {
+        "class": "File",
+        "path": "/Users/abarrera/data/ts-views/GR.t5_rep2.fragment_extended_norm.chr21.bw"
       }
     ]
   ]

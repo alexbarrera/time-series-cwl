@@ -43,7 +43,13 @@ inputs:
     type: int
 
 steps:
-
+  - id: "#bins-list"
+    run: "extract-bins-from-nextend-bins-tuples.cwl"
+    inputs:
+      - id: "#bins-list.arrays"
+        source: "#nextend_bins_tuples"
+    outputs:
+      - id: "#bins-list.flattened_array"
   - id: "#process-sample"
     run: "pipeline-one-factor.cwl"
     scatter: "#process-sample.bigwigs"
@@ -79,6 +85,8 @@ steps:
           }
       - id: "#add-gene-name.genes_bedfile"
         source: "#regions_bedfile"
+      - id: "#add-gene-name.resloutions"
+        source: "#bins-list.flattened_array"
     outputs:
       - id: "#add-gene-name.out"
 
