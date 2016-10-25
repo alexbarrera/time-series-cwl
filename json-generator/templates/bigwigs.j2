@@ -1,6 +1,26 @@
 {
     "nthreads": {{ nthreads }},
-    "regions_bedfile": "/Users/abarrera/workspace/time-series-cwl/README.md",
-    "nextend_bins_tuple": {{ nextend_bins_tuple }},
-    "bigwigs": {{ bigwigs }}
+    "regions_bedfile":
+        {
+            "class": "File",
+            "path": {{ regions_bedfile }}
+        },
+    "gtf":
+        {
+            "class": "File",
+            "path": {{ gtf }}
+        },
+    "nextend_bins_tuples": {{ nextend_bins_tuples }},
+    "bigwigs": [
+    {%  for bws_factor in bigwigs %}
+        [
+        {%  for bw_factor in bws_factor %}
+            {
+              "class": "File",
+              "path": {{ bw_factor }}
+            }{% if not loop.last %},{%- endif %}
+        {%- endfor %}
+        ]{% if not loop.last %},{%- endif %}
+    {%- endfor %}
+    ]
 }

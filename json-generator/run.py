@@ -35,13 +35,15 @@ def main():
 
     parser.add_argument('-regions-bedfile', type=file, required=True,
                         help='Bedfile with the regions used as anchor points.')
+    parser.add_argument('-gtf', type=file, required=True,
+                        help='GTF annotation file used to retrieve genes names')
     parser.add_argument('--nthreads', type=int, dest='nthreads', default=1,
                         help='Number of threads.')
     parser.add_argument('--nextend-bins-tuples', type=int,
-                        default=[[5000, 5], [10000, 10]],
-                        help='tuples with 1. Number of bases to extend to '
-                             'each side of the anchor point, and 2. number of '
-                             'bins.')
+                        action='append', nargs='+', required=True,
+                        help='Pairs of (1) Number of bases to extend to '
+                             'each side of the anchor point, and (2) number of '
+                             'bins (can be specified multiple times)')
 
     # Mutually exclusive options
     group = parser.add_mutually_exclusive_group(required=True)
